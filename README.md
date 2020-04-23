@@ -5,7 +5,9 @@ It basically invokes `Header::hash()` in a `no_std` environment. Because substra
 assume a wasm environment when it's `no_std`, calling `Header::hash()` will result in a wasm
 interface call.
 
-Package `notcompile` shows exact the above problem.
+Package `notcompile` shows exact the above problem. The compiler complains:
+
+> undefined reference to `ext_hashing_blake2_256_version_1'
 
 In package `compile`, I replaced the dependencies by [my fix](https://github.com/paritytech/substrate/pull/5743).
 
