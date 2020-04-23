@@ -1,0 +1,10 @@
+[package]
+name = "notcompile"
+version = "0.1.0"
+authors = ["h4x3rotab <h4x3rotab@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+nostdlib = {path = "./nostdlib"}
