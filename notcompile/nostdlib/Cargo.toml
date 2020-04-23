@@ -6,4 +6,28 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
+
+
+[dependencies.sp-runtime]
+git = "https://github.com/paritytech/substrate"
+rev = "8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+default-features = false
+
+[dependencies.sp-runtime-interface]
+git = "https://github.com/paritytech/substrate"
+rev = "8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+default-features = false
+
+[dependencies.sp-io]
+git = "https://github.com/paritytech/substrate"
+rev = "8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+default-features = false
+
+[features]
+default = [
+  "sp-runtime-interface/disable_target_static_assertions",
+  "sp-io/disable_panic_handler",
+  "sp-io/disable_oom",
+  "sp-io/disable_allocator",
+  # "sp-io/native-nostd"
+]
