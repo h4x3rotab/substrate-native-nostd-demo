@@ -9,18 +9,18 @@ edition = "2018"
 
 
 [dependencies.sp-runtime]
-git = "https://github.com/paritytech/substrate"
-rev = "8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+git = "https://github.com/h4x3rotab/substrate"
+branch = "native-nostd"
 default-features = false
 
 [dependencies.sp-runtime-interface]
-git = "https://github.com/paritytech/substrate"
-rev = "8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+git = "https://github.com/h4x3rotab/substrate"
+branch = "native-nostd"
 default-features = false
 
 [dependencies.sp-io]
-git = "https://github.com/paritytech/substrate"
-rev = "8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+git = "https://github.com/h4x3rotab/substrate"
+branch = "native-nostd"
 default-features = false
 
 [dependencies.sp-core]
@@ -41,4 +41,5 @@ default = [
   "sp-io/disable_allocator",
   "sp-core/full_crypto",
   "sp-application-crypto/full_crypto",
+  "sp-io/native-nostd",  # enable native-nostd for sp-io::hashing
 ]

@@ -117,6 +117,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "compile"
+version = "0.1.0"
+dependencies = [
+ "nostdlib",
+]
+
+[[package]]
 name = "constant_time_eq"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -329,18 +336,11 @@ checksum = "72ef4a56884ca558e5ddb05a1d1e7e1bfd9a68d9ed024c21704cc98872dae1bb"
 name = "nostdlib"
 version = "0.1.0"
 dependencies = [
- "sp-application-crypto 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-core 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-io 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-application-crypto",
+ "sp-core",
+ "sp-io",
  "sp-runtime",
- "sp-runtime-interface 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
-]
-
-[[package]]
-name = "notcompile"
-version = "0.1.0"
-dependencies = [
- "nostdlib",
+ "sp-runtime-interface",
 ]
 
 [[package]]
@@ -597,33 +597,22 @@ version = "2.0.0-dev"
 source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
 dependencies = [
  "parity-scale-codec",
- "sp-core 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-io 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-std 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
-]
-
-[[package]]
-name = "sp-application-crypto"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
-dependencies = [
- "parity-scale-codec",
- "sp-core 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-io 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-core",
+ "sp-io",
+ "sp-std",
 ]
 
 [[package]]
 name = "sp-arithmetic"
 version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
 dependencies = [
  "integer-sqrt",
  "num-traits",
  "parity-scale-codec",
  "primitive-types",
- "sp-debug-derive 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-debug-derive",
+ "sp-std",
 ]
 
 [[package]]
@@ -646,32 +635,12 @@ dependencies = [
  "primitive-types",
  "schnorrkel",
  "sha2",
- "sp-debug-derive 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-runtime-interface 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-std 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-storage 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
+ "sp-debug-derive",
+ "sp-runtime-interface",
+ "sp-std",
+ "sp-storage",
  "tiny-keccak",
  "twox-hash",
- "zeroize",
-]
-
-[[package]]
-name = "sp-core"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
-dependencies = [
- "byteorder",
- "hash-db",
- "hash256-std-hasher",
- "log",
- "num-traits",
- "parity-scale-codec",
- "parity-util-mem",
- "primitive-types",
- "sp-debug-derive 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-runtime-interface 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-storage 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
  "zeroize",
 ]
 
@@ -679,16 +648,6 @@ dependencies = [
 name = "sp-debug-derive"
 version = "2.0.0-dev"
 source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "sp-debug-derive"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -698,11 +657,11 @@ dependencies = [
 [[package]]
 name = "sp-inherents"
 version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
 dependencies = [
  "parity-scale-codec",
- "sp-core 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-core",
+ "sp-std",
 ]
 
 [[package]]
@@ -712,41 +671,28 @@ source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e
 dependencies = [
  "hash-db",
  "parity-scale-codec",
- "sp-core 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-runtime-interface 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-std 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-wasm-interface 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
-]
-
-[[package]]
-name = "sp-io"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
-dependencies = [
- "hash-db",
- "parity-scale-codec",
- "sp-core 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-runtime-interface 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-wasm-interface 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-core",
+ "sp-runtime-interface",
+ "sp-std",
+ "sp-wasm-interface",
 ]
 
 [[package]]
 name = "sp-runtime"
 version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
+source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
 dependencies = [
  "hash256-std-hasher",
  "impl-trait-for-tuples",
  "parity-scale-codec",
  "parity-util-mem",
  "paste",
- "sp-application-crypto 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-application-crypto",
  "sp-arithmetic",
- "sp-core 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-core",
  "sp-inherents",
- "sp-io 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-io",
+ "sp-std",
 ]
 
 [[package]]
@@ -756,24 +702,10 @@ source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e
 dependencies = [
  "parity-scale-codec",
  "primitive-types",
- "sp-runtime-interface-proc-macro 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-std 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-tracing 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-wasm-interface 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "static_assertions",
-]
-
-[[package]]
-name = "sp-runtime-interface"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
-dependencies = [
- "parity-scale-codec",
- "primitive-types",
- "sp-runtime-interface-proc-macro 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-tracing 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-wasm-interface 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-runtime-interface-proc-macro",
+ "sp-std",
+ "sp-tracing",
+ "sp-wasm-interface",
  "static_assertions",
 ]
 
@@ -790,26 +722,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "sp-runtime-interface-proc-macro"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
-dependencies = [
- "Inflector",
- "proc-macro-crate",
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
 name = "sp-std"
 version = "2.0.0-dev"
 source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
-
-[[package]]
-name = "sp-std"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
 
 [[package]]
 name = "sp-storage"
@@ -817,18 +732,8 @@ version = "2.0.0-dev"
 source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
 dependencies = [
  "ref-cast",
- "sp-debug-derive 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
- "sp-std 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
-]
-
-[[package]]
-name = "sp-storage"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
-dependencies = [
- "ref-cast",
- "sp-debug-derive 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-debug-derive",
+ "sp-std",
 ]
 
 [[package]]
@@ -837,28 +742,13 @@ version = "2.0.0-dev"
 source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
 
 [[package]]
-name = "sp-tracing"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
-
-[[package]]
 name = "sp-wasm-interface"
 version = "2.0.0-dev"
 source = "git+https://github.com/h4x3rotab/substrate?branch=native-nostd#4725a6e23e7fbd61b534bb8593d6b16133a4723b"
 dependencies = [
  "impl-trait-for-tuples",
  "parity-scale-codec",
- "sp-std 2.0.0-dev (git+https://github.com/h4x3rotab/substrate?branch=native-nostd)",
-]
-
-[[package]]
-name = "sp-wasm-interface"
-version = "2.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0#8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0"
-dependencies = [
- "impl-trait-for-tuples",
- "parity-scale-codec",
- "sp-std 2.0.0-dev (git+https://github.com/paritytech/substrate?rev=8a47b4ff049409b0d5d89abaf63f42dd9f3ab9f0)",
+ "sp-std",
 ]
 
 [[package]]
